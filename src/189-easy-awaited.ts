@@ -1,6 +1,6 @@
 /* _____________ 你的代码 _____________ */
 
-type Awaited<T extends Promise<unknown>> = T extends Promise<infer R>
+type Awaited<T extends Promise<infer R>> = T extends Promise< R>
   ? R
   : never
 

@@ -1,5 +1,5 @@
 type MyExclude<T, U> = T extends U ? never : T
-
+type s = MyExclude<'a' | 'b' | 'c', 'c' | 'd' | 'f'>
 /* _____________ 测试用例 _____________ */
 import { Equal, Expect } from '@type-challenges/utils'
 

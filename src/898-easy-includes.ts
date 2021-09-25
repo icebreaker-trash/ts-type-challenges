@@ -8,15 +8,13 @@
 //  [C, U] extends [U, C] ? true : Includes<R, U>
 //  : false;
 
-
- type Includes<T extends readonly any[], U> = T extends [infer L, ...infer R]
+type Includes<T extends readonly any[], U> = T extends [infer L, ...infer R]
   ? [U, L] extends [L, U]
     ? true
     : Includes<R, U>
   : false
 
-
-type y = Includes<[false, 2, 3, 5, 6, 7], false>
+type testCase = Includes<[false, 2, 3, 5, 6, 7], false>
 
 type yyy<T extends readonly any[], U> = {
   [K in T[number]]: true

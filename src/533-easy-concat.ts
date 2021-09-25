@@ -1,7 +1,8 @@
 /* _____________ Your Code Here _____________ */
 
-type Concat<T extends unknown[], U extends unknown[]> = [...T, ...U]
+//type Concat<T extends unknown[], U extends unknown[]> = [...T, ...U]
 
+type Concat<T extends unknown[], U extends unknown[]> = T['concat'](U)
 /* _____________ Test Cases _____________ */
 import { Equal, Expect } from '@type-challenges/utils'
 
